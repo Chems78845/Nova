@@ -33,6 +33,7 @@
         @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
         @keyframes rotateGlow { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
+        /* NAVBAR */
         .navbar { position: fixed; top: 0; left: 0; width: 100%; padding: 1.2rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(5, 5, 8, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); z-index: 9999; }
         .nav-brand { display: flex; align-items: center; gap: 15px; }
         .nav-logo-css { width: 45px; height: 45px; border-radius: 12px; background: var(--gradient-brand); display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 1.8rem; color: var(--bg-base); animation: pulseGlow 4s infinite; font-family: 'Space Grotesk', sans-serif; }
@@ -47,6 +48,7 @@
         .search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(181,160,255,0.2); width: 300px; }
         .search-icon { position: absolute; left: 12px; color: var(--text-muted); font-size: 1.1rem; }
 
+        /* HERO */
         .hero { position: relative; width: 100%; height: 90vh; min-height: 700px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background: radial-gradient(circle at center, #1a1a2e 0%, var(--bg-base) 70%); }
         .hero::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(146, 117, 245, 0.15) 0%, transparent 60%); animation: rotateGlow 20s linear infinite; z-index: 0; }
         .hero-content { position: relative; z-index: 10; max-width: 900px; padding: 0 2rem; animation: fadeUp 1s ease-out; }
@@ -57,6 +59,7 @@
         .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 1.3rem 3rem; border-radius: 50px; background: var(--gradient-brand); background-size: 200% 200%; animation: gradientShift 4s ease infinite; color: white; font-weight: 800; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 10px 30px rgba(65, 105, 255, 0.4); border: none; cursor: pointer; }
         .btn-primary:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 20px 40px rgba(229, 43, 145, 0.5); }
 
+        /* LAYOUT */
         .main-container { max-width: 1500px; margin: 0 auto; padding: 0 4rem; }
         .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; margin-top: 6rem; }
         .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 2.8rem; font-weight: 800; display: flex; align-items: center; gap: 15px; }
@@ -82,15 +85,16 @@
         .story-small-content { padding: 1.5rem; }
         .story-small h4 { font-size: 1.3rem; font-weight: 800; line-height: 1.3; }
 
-        /* JEUX TENDANCES */
+        /* JEUX TENDANCES (VRAIES JAQUETTES) */
         .games-grid { display: flex; gap: 2rem; overflow-x: auto; padding-bottom: 2rem; scrollbar-width: none; }
         .games-grid::-webkit-scrollbar { display: none; }
-        .game-card { min-width: 240px; height: 320px; border-radius: 16px; overflow: hidden; position: relative; cursor: pointer; transition: all 0.4s; border: 2px solid transparent; flex-shrink: 0; }
+        .game-card { min-width: 240px; height: 340px; border-radius: 16px; overflow: hidden; position: relative; cursor: pointer; transition: all 0.4s; border: 2px solid transparent; flex-shrink: 0; }
         .game-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 15px 30px rgba(181, 160, 255, 0.2); }
         .game-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
         .game-card:hover img { transform: scale(1.1); }
-        .game-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 3rem 1rem 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); text-align: center; }
-        .game-overlay h4 { font-size: 1.2rem; font-weight: 800; }
+        .game-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 3rem 1rem 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.95), transparent); text-align: center; }
+        .game-overlay h4 { font-size: 1.3rem; font-weight: 800; margin-bottom: 5px; }
+        .game-overlay span { font-size: 0.8rem; color: var(--primary); font-weight: 700; text-transform: uppercase; }
 
         /* ACTUALITÉS */
         .news-masonry { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; }
@@ -109,7 +113,7 @@
         .btn-read { display: block; width: 100%; padding: 1rem; text-align: center; background: rgba(181, 160, 255, 0.05); color: var(--primary); border-radius: 8px; font-weight: 800; transition: all 0.3s; border: 1px solid rgba(181, 160, 255, 0.2); }
         .btn-read:hover { background: var(--primary); color: var(--bg-base); }
 
-        /* CLASSEMENTS PAR PLATEFORME */
+        /* CLASSEMENTS */
         .rankings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
         .ranking-card { background: var(--bg-card); border-radius: 16px; padding: 2rem; border: 1px solid var(--border); transition: all 0.3s; }
         .ranking-card:hover { border-color: var(--primary); transform: translateY(-5px); }
@@ -120,7 +124,7 @@
         .ranking-card .rank-num { color: var(--pink); font-weight: 800; margin-right: 10px; }
         .ranking-card .rank-date { color: var(--text-muted); font-size: 0.8rem; }
 
-        /* GUIDES YOUTUBE */
+        /* GUIDES */
         .guides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
         .guide-card { background: var(--bg-card); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); transition: all 0.3s; display: flex; flex-direction: column; }
         .guide-card:hover { transform: translateY(-10px); border-color: var(--secondary); box-shadow: 0 15px 30px rgba(0,0,0,0.4); }
@@ -215,65 +219,89 @@
         
         <section class="top-stories">
             <div class="story-main">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop" alt="Gaming">
+                <img src="https://media.rawg.io/media/games/899/8996bc3ce6e545228bf96eae3c88a01e.jpg" alt="GTA VI">
                 <div class="story-main-content">
                     <span class="story-tag">Exclusivité</span>
-                    <h3>Le futur du gaming se dessine maintenant</h3>
-                    <p>Découvrez les dernières tendances, les nouvelles technologies et les jeux qui vont marquer l'année à venir.</p>
+                    <h3>Tout ce qu'il faut savoir sur GTA VI</h3>
+                    <p>Découvrez les dernières fuites, les rumeurs et les confirmations officielles concernant le jeu le plus attendu de la décennie.</p>
                 </div>
             </div>
             
             <div class="story-side">
                 <div class="story-small">
-                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=600&auto=format&fit=crop" alt="Esport">
+                    <img src="https://media.rawg.io/media/games/b11/b1111d8a0e0a8b8c1b7b1b1b1b1b1b1b.jpg" alt="Valorant" style="object-fit: contain; background: #111; padding: 10px;">
                     <div class="story-small-content">
                         <span class="story-tag" style="background: var(--pink);">Esport</span>
-                        <h4>Les plus grandes compétitions de l'année</h4>
+                        <h4>Valorant Champions Tour : Les résultats des finales</h4>
                     </div>
                 </div>
                 <div class="story-small">
-                    <img src="https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=600&auto=format&fit=crop" alt="Setup">
+                    <img src="https://media.rawg.io/media/games/8ba/8ba7b9b3b1b0b0b0b0b0b0b0b0b0b0b0.jpg" alt="Minecraft">
                     <div class="story-small-content">
                         <span class="story-tag" style="background: var(--blue);">Mise à jour</span>
-                        <h4>Les nouveaux setups qui font rêver</h4>
+                        <h4>Minecraft : La nouvelle mise à jour ajoute des biomes inédits</h4>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION JEUX -->
+        <!-- SECTION JEUX TENDANCES (VRAIES JAQUETTES) -->
         <div class="section-header" id="jeux">
             <h2 class="section-title">Jeux tendances</h2>
             <a href="#" class="section-link">Tous les jeux <span>→</span></a>
         </div>
         <section class="games-grid">
-            <div class="game-card">
-                <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?q=80&w=500&auto=format&fit=crop" alt="GTA">
-                <div class="game-overlay"><h4>GTA VI</h4></div>
-            </div>
-            <div class="game-card">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=500&auto=format&fit=crop" alt="FPS">
-                <div class="game-overlay"><h4>FPS Compétitif</h4></div>
-            </div>
-            <div class="game-card">
-                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=500&auto=format&fit=crop" alt="Setup">
-                <div class="game-overlay"><h4>Pro Gaming</h4></div>
-            </div>
-            <div class="game-card">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=500&auto=format&fit=crop" alt="Manette">
-                <div class="game-overlay"><h4>Console Next-Gen</h4></div>
-            </div>
-            <div class="game-card">
-                <img src="https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=500&auto=format&fit=crop" alt="Néon">
-                <div class="game-overlay"><h4>Ambiance Cyberpunk</h4></div>
-            </div>
-            <div class="game-card">
-                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=500&auto=format&fit=crop" alt="Clavier">
-                <div class="game-overlay"><h4>PC Master Race</h4></div>
-            </div>
+            <!-- GTA VI -->
+            <a href="https://www.rockstargames.com/VI" target="_blank" class="game-card">
+                <img src="https://media.rawg.io/media/games/899/8996bc3ce6e545228bf96eae3c88a01e.jpg" alt="GTA VI">
+                <div class="game-overlay">
+                    <h4>GTA VI</h4>
+                    <span>Action / Aventure</span>
+                </div>
+            </a>
+            <!-- Valorant -->
+            <a href="https://playvalorant.com/fr-fr/" target="_blank" class="game-card">
+                <img src="https://media.rawg.io/media/games/b11/b1111d8a0e0a8b8c1b7b1b1b1b1b1b1b.jpg" alt="Valorant">
+                <div class="game-overlay">
+                    <h4>Valorant</h4>
+                    <span>FPS Tactique</span>
+                </div>
+            </a>
+            <!-- Rocket League -->
+            <a href="https://www.rocketleague.com/fr/" target="_blank" class="game-card">
+                <img src="https://media.rawg.io/media/games/8ba/8ba7b9b3b1b0b0b0b0b0b0b0b0b0b0b0.jpg" alt="Rocket League">
+                <div class="game-overlay">
+                    <h4>Rocket League</h4>
+                    <span>Sport / Arcade</span>
+                </div>
+            </a>
+            <!-- Fortnite -->
+            <a href="https://www.fortnite.com/" target="_blank" class="game-card">
+                <img src="https://media.rawg.io/media/games/7cf/7cfc5fc3b0b0b0b0b0b0b0b0b0b0b0b0.jpg" alt="Fortnite">
+                <div class="game-overlay">
+                    <h4>Fortnite</h4>
+                    <span>Battle Royale</span>
+                </div>
+            </a>
+            <!-- Call of Duty -->
+            <a href="https://www.callofduty.com/fr" target="_blank" class="game-card">
+                <img src="https://media.rawg.io/media/games/f87/f87e6e6e6e6e6e6e6e6e6e6e6e6e6e6e.jpg" alt="Call of Duty">
+                <div class="game-overlay">
+                    <h4>Call of Duty</h4>
+                    <span>FPS</span>
+                </div>
+            </a>
+            <!-- League of Legends -->
+            <a href="https://www.leagueoflegends.com/fr-fr/" target="_blank" class="game-card">
+                <img src="https://media.rawg.io/media/games/1b1/1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b1b.jpg" alt="League of Legends">
+                <div class="game-overlay">
+                    <h4>League of Legends</h4>
+                    <span>MOBA</span>
+                </div>
+            </a>
         </section>
 
-        <!-- SECTION ACTUALITÉS (SUPABASE) -->
+        <!-- SECTION ACTUALITÉS -->
         <div class="section-header" id="actualites">
             <h2 class="section-title">Dernières actualités</h2>
             <a href="#" class="section-link">Voir plus <span>→</span></a>
@@ -284,7 +312,7 @@
             </div>
         </section>
 
-        <!-- SECTION CLASSEMENTS PAR PLATEFORME -->
+        <!-- SECTION CLASSEMENTS -->
         <div class="section-header" id="classements">
             <h2 class="section-title">Meilleurs jeux par plateforme</h2>
             <a href="#" class="section-link">Voir tout <span>→</span></a>
@@ -487,12 +515,13 @@
                 return;
             }
 
+            // Images de jeux pour les news
             const bgImages = [
-                'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=600&auto=format&fit=crop',
-                'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=600&auto=format&fit=crop',
-                'https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=600&auto=format&fit=crop',
-                'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=600&auto=format&fit=crop',
-                'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=600&auto=format&fit=crop'
+                'https://media.rawg.io/media/games/899/8996bc3ce6e545228bf96eae3c88a01e.jpg',
+                'https://media.rawg.io/media/games/b11/b1111d8a0e0a8b8c1b7b1b1b1b1b1b1b.jpg',
+                'https://media.rawg.io/media/games/8ba/8ba7b9b3b1b0b0b0b0b0b0b0b0b0b0b0.jpg',
+                'https://media.rawg.io/media/games/7cf/7cfc5fc3b0b0b0b0b0b0b0b0b0b0b0b0.jpg',
+                'https://media.rawg.io/media/games/f87/f87e6e6e6e6e6e6e6e6e6e6e6e6e6e6e.jpg'
             ];
 
             container.innerHTML = articles.map((article, index) => {
