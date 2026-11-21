@@ -28,31 +28,25 @@
         a { text-decoration: none; color: inherit; }
         img { max-width: 100%; display: block; }
 
-        /* ANIMATIONS */
         @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes pulseGlow { 0% { box-shadow: 0 0 10px rgba(181, 160, 255, 0.2); } 50% { box-shadow: 0 0 30px rgba(181, 160, 255, 0.6); } 100% { box-shadow: 0 0 10px rgba(181, 160, 255, 0.2); } }
         @keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
         @keyframes rotateGlow { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-        /* NAVBAR */
         .navbar { position: fixed; top: 0; left: 0; width: 100%; padding: 1.2rem 4rem; display: flex; justify-content: space-between; align-items: center; background: rgba(5, 5, 8, 0.8); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.05); z-index: 9999; }
         .nav-brand { display: flex; align-items: center; gap: 15px; }
-        /* LOGO CSS PARFAIT (SANS IMAGE) */
         .nav-logo-css { width: 45px; height: 45px; border-radius: 12px; background: var(--gradient-brand); display: flex; justify-content: center; align-items: center; font-weight: 900; font-size: 1.8rem; color: var(--bg-base); animation: pulseGlow 4s infinite; font-family: 'Space Grotesk', sans-serif; }
         .nav-brand-text { font-size: 2rem; font-weight: 900; letter-spacing: 3px; background: var(--gradient-brand); background-size: 200% 200%; animation: gradientShift 5s ease infinite; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
         .nav-links { display: flex; gap: 2.5rem; }
         .nav-links a { font-weight: 600; font-size: 1.05rem; color: var(--text-muted); transition: color 0.3s; position: relative; }
         .nav-links a:hover, .nav-links a.active { color: var(--text-main); }
         .nav-links a::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 3px; background: var(--gradient-brand); transition: width 0.3s; border-radius: 2px; }
         .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-        
         .search-container { position: relative; display: flex; align-items: center; }
         .search-container input { background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 0.7rem 1.2rem 0.7rem 2.8rem; border-radius: 30px; color: white; outline: none; transition: all 0.4s; width: 250px; }
         .search-container input:focus { border-color: var(--primary); box-shadow: 0 0 20px rgba(181,160,255,0.2); width: 300px; }
         .search-icon { position: absolute; left: 12px; color: var(--text-muted); font-size: 1.1rem; }
 
-        /* HERO SECTION (100% CSS) */
         .hero { position: relative; width: 100%; height: 90vh; min-height: 700px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background: radial-gradient(circle at center, #1a1a2e 0%, var(--bg-base) 70%); }
         .hero::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(146, 117, 245, 0.15) 0%, transparent 60%); animation: rotateGlow 20s linear infinite; z-index: 0; }
         .hero-content { position: relative; z-index: 10; max-width: 900px; padding: 0 2rem; animation: fadeUp 1s ease-out; }
@@ -63,7 +57,6 @@
         .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 1.3rem 3rem; border-radius: 50px; background: var(--gradient-brand); background-size: 200% 200%; animation: gradientShift 4s ease infinite; color: white; font-weight: 800; font-size: 1.2rem; transition: all 0.3s; box-shadow: 0 10px 30px rgba(65, 105, 255, 0.4); border: none; cursor: pointer; }
         .btn-primary:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 20px 40px rgba(229, 43, 145, 0.5); }
 
-        /* LAYOUT GLOBAL */
         .main-container { max-width: 1500px; margin: 0 auto; padding: 0 4rem; }
         .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; margin-top: 6rem; }
         .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 2.8rem; font-weight: 800; display: flex; align-items: center; gap: 15px; }
@@ -89,7 +82,7 @@
         .story-small-content { padding: 1.5rem; }
         .story-small h4 { font-size: 1.3rem; font-weight: 800; line-height: 1.3; }
 
-        /* JEUX TENDANCES (IMAGES FIABLES) */
+        /* JEUX TENDANCES */
         .games-grid { display: flex; gap: 2rem; overflow-x: auto; padding-bottom: 2rem; scrollbar-width: none; }
         .games-grid::-webkit-scrollbar { display: none; }
         .game-card { min-width: 240px; height: 320px; border-radius: 16px; overflow: hidden; position: relative; cursor: pointer; transition: all 0.4s; border: 2px solid transparent; flex-shrink: 0; }
@@ -99,7 +92,7 @@
         .game-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 3rem 1rem 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); text-align: center; }
         .game-overlay h4 { font-size: 1.2rem; font-weight: 800; }
 
-        /* ACTUALITÉS (SUPABASE) */
+        /* ACTUALITÉS */
         .news-masonry { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; }
         .news-card { background: var(--bg-surface); border-radius: 20px; overflow: hidden; border: 1px solid var(--border); display: flex; flex-direction: column; transition: all 0.4s; animation: fadeUp 0.8s ease-out backwards; }
         .news-card:hover { transform: translateY(-8px); border-color: var(--secondary); box-shadow: 0 15px 30px rgba(146, 117, 245, 0.15); }
@@ -116,16 +109,29 @@
         .btn-read { display: block; width: 100%; padding: 1rem; text-align: center; background: rgba(181, 160, 255, 0.05); color: var(--primary); border-radius: 8px; font-weight: 800; transition: all 0.3s; border: 1px solid rgba(181, 160, 255, 0.2); }
         .btn-read:hover { background: var(--primary); color: var(--bg-base); }
 
-        /* GUIDES */
-        .guides-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .guide-card { background: var(--bg-card); border-radius: 16px; padding: 2.5rem; border: 1px solid var(--border); position: relative; overflow: hidden; transition: all 0.3s; cursor: pointer; }
-        .guide-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--gradient-brand); opacity: 0; transition: opacity 0.3s; }
-        .guide-card:hover { transform: translateY(-10px); background: var(--bg-card-hover); box-shadow: 0 15px 30px rgba(0,0,0,0.4); }
-        .guide-card:hover::before { opacity: 1; }
-        .guide-icon { font-size: 3rem; margin-bottom: 1.5rem; }
-        .guide-card h4 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; }
-        .guide-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .guide-tag { display: inline-block; font-size: 0.8rem; color: var(--primary); font-weight: 800; text-transform: uppercase; }
+        /* CLASSEMENTS PAR PLATEFORME */
+        .rankings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+        .ranking-card { background: var(--bg-card); border-radius: 16px; padding: 2rem; border: 1px solid var(--border); transition: all 0.3s; }
+        .ranking-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .ranking-card h4 { font-size: 1.4rem; font-weight: 800; margin-bottom: 1.5rem; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+        .ranking-card ul { list-style: none; }
+        .ranking-card li { padding: 0.8rem 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; }
+        .ranking-card li:last-child { border-bottom: none; }
+        .ranking-card .rank-num { color: var(--pink); font-weight: 800; margin-right: 10px; }
+        .ranking-card .rank-date { color: var(--text-muted); font-size: 0.8rem; }
+
+        /* GUIDES YOUTUBE */
+        .guides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; }
+        .guide-card { background: var(--bg-card); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); transition: all 0.3s; display: flex; flex-direction: column; }
+        .guide-card:hover { transform: translateY(-10px); border-color: var(--secondary); box-shadow: 0 15px 30px rgba(0,0,0,0.4); }
+        .guide-thumb { position: relative; height: 180px; background: #000; display: flex; align-items: center; justify-content: center; }
+        .guide-thumb .play-icon { width: 60px; height: 60px; background: rgba(229, 43, 145, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; transition: all 0.3s; }
+        .guide-card:hover .play-icon { transform: scale(1.1); background: var(--pink); }
+        .guide-info { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .guide-info h4 { font-size: 1.2rem; font-weight: 800; margin-bottom: 0.5rem; line-height: 1.3; }
+        .guide-info p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; flex-grow: 1; }
+        .guide-info .guide-link { color: var(--primary); font-weight: 700; font-size: 0.9rem; display: flex; align-items: center; gap: 5px; }
+        .guide-info .guide-link:hover { color: var(--pink); }
 
         /* FOOTER */
         footer { background: var(--bg-surface); border-top: 1px solid var(--border); padding: 5rem 4rem 2rem; margin-top: 6rem; }
@@ -137,23 +143,32 @@
         .footer-col a:hover { color: var(--primary); }
         .footer-bottom { max-width: 1500px; margin: 0 auto; padding-top: 2rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; color: var(--text-muted); font-size: 0.9rem; }
 
-        /* LOADER */
         .loader-container { display: flex; justify-content: center; align-items: center; padding: 5rem; width: 100%; }
         .loader { width: 48px; height: 48px; border: 5px solid var(--bg-card); border-bottom-color: var(--primary); border-radius: 50%; display: inline-block; animation: rotateGlow 1s linear infinite; }
 
         /* RESPONSIVE */
-        @media (max-width: 1024px) {
+        @media (max-width: 1200px) {
             .top-stories { grid-template-columns: 1fr; }
-            .guides-grid { grid-template-columns: 1fr 1fr; }
-            .hero h1 { font-size: 3.5rem; }
+            .story-main { height: 400px; }
+            .hero h1 { font-size: 4rem; }
             .footer-content { grid-template-columns: 1fr 1fr; }
             .main-container { padding: 0 2rem; }
+            .navbar { padding: 1rem 2rem; }
         }
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .hero h1 { font-size: 2.5rem; }
-            .guides-grid { grid-template-columns: 1fr; }
+            .search-container { display: none; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero { height: 80vh; min-height: 600px; }
+            .hero-content { padding: 0 1.5rem; }
             .footer-content { grid-template-columns: 1fr; }
+            .story-main h3 { font-size: 1.8rem; }
+            .section-title { font-size: 2rem; }
+            .section-header { margin-top: 4rem; }
+            .main-container { padding: 0 1.5rem; }
+            .news-masonry { grid-template-columns: 1fr; }
+            .rankings-grid { grid-template-columns: 1fr; }
+            .guides-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -169,7 +184,7 @@
             <a href="#" class="active">Accueil</a>
             <a href="#actualites">Actualités</a>
             <a href="#jeux">Jeux</a>
-            <a href="#">Bons plans</a>
+            <a href="#classements">Classements</a>
             <a href="#guides">Guides</a>
         </div>
         <div class="search-container">
@@ -269,30 +284,140 @@
             </div>
         </section>
 
-        <!-- SECTION GUIDES -->
+        <!-- SECTION CLASSEMENTS PAR PLATEFORME -->
+        <div class="section-header" id="classements">
+            <h2 class="section-title">Meilleurs jeux par plateforme</h2>
+            <a href="#" class="section-link">Voir tout <span>→</span></a>
+        </div>
+        <section class="rankings-grid">
+            <div class="ranking-card">
+                <h4>🖥️ PC</h4>
+                <ul>
+                    <li><span><span class="rank-num">1.</span> Mixtape</span> <span class="rank-date">07 Mai 2026</span></li>
+                    <li><span><span class="rank-num">2.</span> Mewgenics</span> <span class="rank-date">10 Fév 2026</span></li>
+                    <li><span><span class="rank-num">3.</span> Planet Zoo 2</span> <span class="rank-date">13 Oct 2026</span></li>
+                    <li><span><span class="rank-num">4.</span> Denshattack!</span> <span class="rank-date">15 Juil 2026</span></li>
+                    <li><span><span class="rank-num">5.</span> Pragmata</span> <span class="rank-date">17 Avr 2026</span></li>
+                </ul>
+            </div>
+            <div class="ranking-card">
+                <h4>🎮 PlayStation 5</h4>
+                <ul>
+                    <li><span><span class="rank-num">1.</span> Saros</span> <span class="rank-date">30 Avr 2026</span></li>
+                    <li><span><span class="rank-num">2.</span> Pragmata</span> <span class="rank-date">17 Avr 2026</span></li>
+                    <li><span><span class="rank-num">3.</span> Star Wars: Galactic Racer</span> <span class="rank-date">06 Oct 2026</span></li>
+                    <li><span><span class="rank-num">4.</span> Nioh 3</span> <span class="rank-date">06 Fév 2026</span></li>
+                    <li><span><span class="rank-num">5.</span> Hades II</span> <span class="rank-date">14 Avr 2026</span></li>
+                </ul>
+            </div>
+            <div class="ranking-card">
+                <h4>🟢 Xbox Series</h4>
+                <ul>
+                    <li><span><span class="rank-num">1.</span> Forza Horizon 6</span> <span class="rank-date">19 Mai 2026</span></li>
+                    <li><span><span class="rank-num">2.</span> Pragmata</span> <span class="rank-date">17 Avr 2026</span></li>
+                    <li><span><span class="rank-num">3.</span> Planet Zoo 2</span> <span class="rank-date">13 Oct 2026</span></li>
+                    <li><span><span class="rank-num">4.</span> Star Wars: Galactic Racer</span> <span class="rank-date">06 Oct 2026</span></li>
+                    <li><span><span class="rank-num">5.</span> Hades II</span> <span class="rank-date">14 Avr 2026</span></li>
+                </ul>
+            </div>
+            <div class="ranking-card">
+                <h4>🔴 Nintendo Switch</h4>
+                <ul>
+                    <li><span><span class="rank-num">1.</span> Trails in the Sky 2nd Chapter</span> <span class="rank-date">17 Sep 2026</span></li>
+                    <li><span><span class="rank-num">2.</span> Dragon Quest VII Reimagined</span> <span class="rank-date">05 Fév 2026</span></li>
+                    <li><span><span class="rank-num">3.</span> Minecraft Dungeons II</span> <span class="rank-date">29 Sep 2026</span></li>
+                    <li><span><span class="rank-num">4.</span> Another Eden Begins</span> <span class="rank-date">17 Sep 2026</span></li>
+                    <li><span><span class="rank-num">5.</span> Lou's Lagoon</span> <span class="rank-date">27 Août 2026</span></li>
+                </ul>
+            </div>
+            <div class="ranking-card">
+                <h4>📱 Mobile</h4>
+                <ul>
+                    <li><span><span class="rank-num">1.</span> Arknights: Endfield</span> <span class="rank-date">22 Jan 2026</span></li>
+                    <li><span><span class="rank-num">2.</span> Pokémon Champions</span> <span class="rank-date">08 Avr 2026</span></li>
+                    <li><span><span class="rank-num">3.</span> Neverness to Everness</span> <span class="rank-date">29 Avr 2026</span></li>
+                    <li><span><span class="rank-num">4.</span> Aniimo</span> <span class="rank-date">23 Sep 2026</span></li>
+                    <li><span><span class="rank-num">5.</span> ONE PIECE: Grand Gourmet</span> <span class="rank-date">23 Oct 2026</span></li>
+                </ul>
+            </div>
+            <div class="ranking-card">
+                <h4>🆓 Free-to-Play PC</h4>
+                <ul>
+                    <li><span><span class="rank-num">1.</span> Rocket League</span> <span class="rank-date">2015</span></li>
+                    <li><span><span class="rank-num">2.</span> Final Fantasy XIV (Free Trial)</span> <span class="rank-date">2013</span></li>
+                    <li><span><span class="rank-num">3.</span> Honkai: Star Rail</span> <span class="rank-date">2023</span></li>
+                    <li><span><span class="rank-num">4.</span> Teamfight Tactics</span> <span class="rank-date">2019</span></li>
+                    <li><span><span class="rank-num">5.</span> Path of Exile</span> <span class="rank-date">2013</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION GUIDES YOUTUBE -->
         <div class="section-header" id="guides">
-            <h2 class="section-title">Guides & Astuces</h2>
+            <h2 class="section-title">Guides & Tutos Vidéo</h2>
             <a href="#" class="section-link">Tous les guides <span>→</span></a>
         </div>
         <section class="guides-grid">
-            <div class="guide-card">
-                <div class="guide-icon">🎯</div>
-                <h4>Optimiser ses FPS</h4>
-                <p>Les meilleurs réglages pour augmenter vos performances sur PC et console, sans perdre en qualité visuelle.</p>
-                <span class="guide-tag">Guide PC</span>
-            </div>
-            <div class="guide-card">
-                <div class="guide-icon">🏆</div>
-                <h4>Devenir Pro sur Valorant</h4>
-                <p>Apprenez le positionnement, le crosshair placement et la gestion de l'économie pour dominer le classement.</p>
-                <span class="guide-tag">Esport</span>
-            </div>
-            <div class="guide-card">
-                <div class="guide-icon">💰</div>
-                <h4>Économiser sur ses jeux</h4>
-                <p>Découvrez les astuces pour acheter vos jeux moins cher sur Steam, Epic Games et les autres plateformes.</p>
-                <span class="guide-tag">Bons plans</span>
-            </div>
+            <a href="https://www.youtube.com/results?search_query=fortnite+tuto+francais" target="_blank" class="guide-card">
+                <div class="guide-thumb" style="background: linear-gradient(135deg, #1e1e2e, #2a2a3e);">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="guide-info">
+                    <h4>Fortnite : Maîtriser le Piece Control</h4>
+                    <p>Apprenez les techniques de construction et de contrôle de pièce utilisées par les pros pour dominer vos combats.</p>
+                    <span class="guide-link">Voir les tutos YouTube →</span>
+                </div>
+            </a>
+            <a href="https://www.youtube.com/results?search_query=minecraft+ferme+fer+tuto+francais" target="_blank" class="guide-card">
+                <div class="guide-thumb" style="background: linear-gradient(135deg, #1e2e1e, #2a3e2a);">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="guide-info">
+                    <h4>Minecraft : Ferme à Fer Ultime</h4>
+                    <p>Construisez la ferme à fer la plus simple et la plus rentable pour votre survie sur Bedrock et Java.</p>
+                    <span class="guide-link">Voir les tutos YouTube →</span>
+                </div>
+            </a>
+            <a href="https://www.youtube.com/results?search_query=valorant+guide+aim+francais" target="_blank" class="guide-card">
+                <div class="guide-thumb" style="background: linear-gradient(135deg, #2e1e1e, #3e2a2a);">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="guide-info">
+                    <h4>Valorant : Améliorer son Aim</h4>
+                    <p>Les routines d'entraînement et les réglages de sensibilité pour une précision mortelle.</p>
+                    <span class="guide-link">Voir les tutos YouTube →</span>
+                </div>
+            </a>
+            <a href="https://www.youtube.com/results?search_query=gta+6+guide+francais" target="_blank" class="guide-card">
+                <div class="guide-thumb" style="background: linear-gradient(135deg, #2e2e1e, #3e3e2a);">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="guide-info">
+                    <h4>GTA VI : Toutes les Infos</h4>
+                    <p>Les dernières analyses, rumeurs et confirmations sur le jeu le plus attendu de la décennie.</p>
+                    <span class="guide-link">Voir les tutos YouTube →</span>
+                </div>
+            </a>
+            <a href="https://www.youtube.com/results?search_query=rocket+league+tuto+francais" target="_blank" class="guide-card">
+                <div class="guide-thumb" style="background: linear-gradient(135deg, #1e1e2e, #2a2a3e);">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="guide-info">
+                    <h4>Rocket League : Devenir Pro</h4>
+                    <p>Maîtrisez les mécaniques aériennes, le dribble et le positionnement pour grimper les rangs.</p>
+                    <span class="guide-link">Voir les tutos YouTube →</span>
+                </div>
+            </a>
+            <a href="https://www.youtube.com/results?search_query=optimisation+pc+gaming+fps+francais" target="_blank" class="guide-card">
+                <div class="guide-thumb" style="background: linear-gradient(135deg, #1e2e2e, #2a3e3e);">
+                    <div class="play-icon">▶</div>
+                </div>
+                <div class="guide-info">
+                    <h4>Optimiser son PC pour le Gaming</h4>
+                    <p>Les meilleurs réglages Windows et les logiciels pour booster vos FPS sans perdre en qualité.</p>
+                    <span class="guide-link">Voir les tutos YouTube →</span>
+                </div>
+            </a>
         </section>
 
     </main>
@@ -308,7 +433,7 @@
                 <h5>Média</h5>
                 <a href="#">Actualités</a>
                 <a href="#">Tests de jeux</a>
-                <a href="#">Dossiers</a>
+                <a href="#">Classements</a>
                 <a href="#">Vidéos</a>
             </div>
             <div class="footer-col">
@@ -362,7 +487,6 @@
                 return;
             }
 
-            // Images fiables pour les news
             const bgImages = [
                 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=600&auto=format&fit=crop',
                 'https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=600&auto=format&fit=crop',
